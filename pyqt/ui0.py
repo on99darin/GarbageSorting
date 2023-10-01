@@ -1,18 +1,13 @@
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QMainWindow,QWidget,QApplication
-from PyQt5.QtGui import QFont
-from PyQt5.QtGui import QStandardItemModel
-from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
+from PyQt5.QtWidgets import QMainWindow,QWidget,QApplication,QLabel
+from PyQt5.QtGui import QStandardItemModel,QFont
 from PyQt5 import uic
 from PyQt5.QtCore import QTimer, Qt
 #import RPi.GPIO as GPIO
-import sys
-from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QMainWindow
-from PyQt5.QtGui import QFont
 
-class Ui_Form(object):
+
+class Ui_Form(QWidget):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(711, 513)
@@ -32,26 +27,31 @@ class Ui_Form(object):
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.horizontalLayout_9 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_9.setObjectName("horizontalLayout_9")
+
         self.label1 = QtWidgets.QLabel(self.widget)
         self.label1.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.label1.setAlignment(QtCore.Qt.AlignCenter)
         self.label1.setObjectName("label1")
         self.horizontalLayout_9.addWidget(self.label1)
+
         self.label2 = QtWidgets.QLabel(self.widget)
         self.label2.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.label2.setAlignment(QtCore.Qt.AlignCenter)
         self.label2.setObjectName("label2")
         self.horizontalLayout_9.addWidget(self.label2)
+        
         self.label3 = QtWidgets.QLabel(self.widget)
         self.label3.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.label3.setAlignment(QtCore.Qt.AlignCenter)
         self.label3.setObjectName("label3")
         self.horizontalLayout_9.addWidget(self.label3)
+
         self.label4 = QtWidgets.QLabel(self.widget)
         self.label4.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.label4.setAlignment(QtCore.Qt.AlignCenter)
         self.label4.setObjectName("label4")
         self.horizontalLayout_9.addWidget(self.label4)
+
         self.verticalLayout_2.addLayout(self.horizontalLayout_9)
         self.widget1 = QtWidgets.QWidget(self.widget)
         self.widget1.setObjectName("widget1")
@@ -164,7 +164,6 @@ class Ui_Form(object):
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
-
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "垃圾分类"))
@@ -190,6 +189,8 @@ class Ui_Form(object):
         self.label18.setText(_translate("Form", "空载"))
         self.label19.setText(_translate("Form", "其他垃圾"))
         self.label20.setText(_translate("Form", "空载"))
+
+
 
 def serial_receive(data):
     global label6,label8,label10,label12
