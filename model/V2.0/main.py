@@ -17,7 +17,7 @@ uart.write('start')
 input_size = (224, 224)
 labels = ['2', '3', '4', '1']
 #2->recycle，1->harm，4->other，3->kitchen
-anchors = [6.08, 2.97, 1.31, 1.16, 2.41, 1.75, 2.84, 3.78, 4.12, 2.22]
+anchors = [1.84, 2.56, 2.78, 1.75, 0.91, 1.62, 4.31, 3.25, 1.59, 0.75]
 
 def lcd_show_except(e):
     import uio
@@ -88,10 +88,9 @@ def main(anchors, labels = None, model_addr="/sd/m.kmodel", sensor_window=input_
 if __name__ == "__main__":
     try:
         # main(anchors = anchors, labels=labels, model_addr=0x300000, lcd_rotation=0)
-        main(anchors = anchors, labels=labels, model_addr="/sd/model-78011.kmodel")
+        main(anchors = anchors, labels=labels, model_addr="/sd/model-89555.kmodel")
     except Exception as e:
         sys.print_exception(e)
         lcd_show_except(e)
     finally:
         gc.collect()
-
