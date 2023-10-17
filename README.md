@@ -5,6 +5,8 @@
 
 `软件环境:`Linux for RPi
 
+`语言:`Python pyqt5
+
 `硬件设备:`K210 of Sipeed，RPi_4B
 
 ### 最大的遗憾：
